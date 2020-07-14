@@ -47,4 +47,11 @@ public class BoardServiceImpl implements BoardService {
     return boardDao.findByNo(no);
   }
 
+  @Override
+  public void update(Board board) throws Exception {
+    if (boardDao.update(board) == 0) {
+      throw new Exception("게시글 업데이트에 실패했습니다.");
+    }
+  }
+
 }
