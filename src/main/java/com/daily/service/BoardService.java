@@ -12,4 +12,6 @@ public interface BoardService {
   void delete(int no) throws Exception;
 
   Board get(int no) throws Exception;
+
+  void update(Board board) throws Exception;
 }

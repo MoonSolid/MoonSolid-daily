@@ -13,4 +13,6 @@ public interface BoardDao {
 
   public int delete(int no) throws Exception;
 
+  public int update(Board board) throws Exception;
+
 }

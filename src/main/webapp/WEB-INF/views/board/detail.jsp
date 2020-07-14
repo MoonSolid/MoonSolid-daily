@@ -30,8 +30,8 @@
 		
 		<!----------------------------------------- 수정삭제 ------------------------------------------------>
 			<div style="text-align: center">
-				<!-- <a href='updateForm?no=${jobPosting.jobPostingNumber}'
-					class="btn btn-sm btn-outline-secondary btn-pill mb-3">수정</a> -->
+				<a href='updateForm?no=${board.boardNumber}'
+					class="btn btn-sm btn-outline-secondary btn-pill mb-3">수정</a>
 				<a href='delete?no=${board.boardNumber}' id="delBtn"
 					class="btn btn-sm btn-outline-secondary btn-pill mb-3">삭제</a>
 			</div>

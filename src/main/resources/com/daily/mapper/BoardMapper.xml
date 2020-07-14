@@ -46,5 +46,15 @@
 		where
 		board_no=#{boardNumber}
 	</delete>
+	
+	<update id="update" parameterType="Board">
+    update board
+    <set>
+      <if test="title != null and title != ''">title=#{title},</if>
+      <if test="content != null and content != ''">content=#{content}</if>
+    </set>
+    where board_no=#{boardNumber}
+  </update>
+	
 
 </mapper>

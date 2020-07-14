@@ -39,6 +39,17 @@ public class BoardController {
     return "redirect:list";
   }
 
+  @GetMapping("updateForm")
+  public void updateForm(int no, Model model) throws Exception {
+    model.addAttribute("board", boardService.get(no));
+  }
+
+  @PostMapping("update")
+  public String update(Board board) throws Exception {
+    boardService.update(board);
+    return "redirect:list";
+  }
+
   @GetMapping("delete")
   public String delete(int no) throws Exception {
     boardService.delete(no);
