@@ -14,4 +14,6 @@ public interface BoardService {
   Board get(int no) throws Exception;
 
   void update(Board board) throws Exception;
+
+  int viewCount(int boardNumber) throws Exception;
 }

@@ -33,9 +33,10 @@ DROP TABLE IF EXISTS board;
 
 -- 게시글
 CREATE TABLE board (
-    board_no INTEGER NOT NULL,
-    title VARCHAR(255) NULL,
-    content VARCHAR(255) NULL
+    board_no INTEGER NOT NULL COMMENT '게시글 번호', -- 게시글 번호
+    title VARCHAR(255) NULL COMMENT '제목', -- 제목
+    view_count INTEGER NOT NULL COMMENT '조회수', -- 조회수
+    content VARCHAR(255) NULL COMMENT '내용' -- 내용
 );
 
 -- 게시글

@@ -7,11 +7,13 @@ public class Board implements Serializable {
 
   private int boardNumber;
   private String title;
+  private int viewCount;
   private String content;
 
   @Override
   public String toString() {
-    return "Board [boardNumber=" + boardNumber + ", title=" + title + ", content=" + content + "]";
+    return "Board [boardNumber=" + boardNumber + ", title=" + title + ", viewCount=" + viewCount
+        + ", content=" + content + "]";
   }
 
   @Override
@@ -21,6 +23,7 @@ public class Board implements Serializable {
     result = prime * result + boardNumber;
     result = prime * result + ((content == null) ? 0 : content.hashCode());
     result = prime * result + ((title == null) ? 0 : title.hashCode());
+    result = prime * result + viewCount;
     return result;
   }
 
@@ -45,6 +48,8 @@ public class Board implements Serializable {
         return false;
     } else if (!title.equals(other.title))
       return false;
+    if (viewCount != other.viewCount)
+      return false;
     return true;
   }
 
@@ -64,6 +69,14 @@ public class Board implements Serializable {
     this.title = title;
   }
 
+  public int getViewCount() {
+    return viewCount;
+  }
+
+  public void setViewCount(int viewCount) {
+    this.viewCount = viewCount;
+  }
+
   public String getContent() {
     return content;
   }
@@ -71,6 +84,7 @@ public class Board implements Serializable {
   public void setContent(String content) {
     this.content = content;
   }
+
 
 
 }

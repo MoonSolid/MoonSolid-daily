@@ -15,4 +15,6 @@ public interface BoardDao {
 
   public int update(Board board) throws Exception;
 
+  int viewCount(int boardNumber) throws Exception;
+
 }
