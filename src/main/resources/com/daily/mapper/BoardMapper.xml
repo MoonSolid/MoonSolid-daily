@@ -8,6 +8,7 @@
 	<resultMap type="Board" id="BoardMap">
 		<id column="board_no" property="boardNumber" />
 		<result column="title" property="title" />
+		<result column="view_count" property="viewCount" />
 		<result column="content" property="content" />
 	</resultMap>
 
@@ -35,6 +36,7 @@
 		select
 		board_no,
 		title,
+		view_count,
 		content
 		from board	
 		where
@@ -56,5 +58,10 @@
     where board_no=#{boardNumber}
   </update>
 	
+	<update id="viewCount" parameterType="int">
+    update board
+    set
+    view_count = view_count + 1 where board_no = #{boardNumber}
+  </update>
 
 </mapper>

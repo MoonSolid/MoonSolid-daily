@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import com.daily.domain.Board;
 import com.daily.service.BoardService;
 
@@ -57,7 +58,8 @@ public class BoardController {
   }
 
   @GetMapping("detail")
-  public void detail(int no, Model model) throws Exception {
+  public void detail(@RequestParam(defaultValue = "1") int no, Model model) throws Exception {
+    boardService.viewCount(no);
     model.addAttribute("board", boardService.get(no));
   }
 
