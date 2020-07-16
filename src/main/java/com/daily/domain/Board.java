@@ -1,6 +1,7 @@
 package com.daily.domain;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class Board implements Serializable {
   private static final long serialVersionUID = 1L;
@@ -9,12 +10,14 @@ public class Board implements Serializable {
   private String title;
   private int viewCount;
   private String content;
+  private Date postingRegistration;
 
   @Override
   public String toString() {
     return "Board [boardNumber=" + boardNumber + ", title=" + title + ", viewCount=" + viewCount
-        + ", content=" + content + "]";
+        + ", content=" + content + ", postingRegistration=" + postingRegistration + "]";
   }
+
 
   @Override
   public int hashCode() {
@@ -22,10 +25,13 @@ public class Board implements Serializable {
     int result = 1;
     result = prime * result + boardNumber;
     result = prime * result + ((content == null) ? 0 : content.hashCode());
+    result = prime * result + ((postingRegistration == null) ? 0 : postingRegistration.hashCode());
     result = prime * result + ((title == null) ? 0 : title.hashCode());
     result = prime * result + viewCount;
     return result;
   }
+
+
 
   @Override
   public boolean equals(Object obj) {
@@ -43,6 +49,11 @@ public class Board implements Serializable {
         return false;
     } else if (!content.equals(other.content))
       return false;
+    if (postingRegistration == null) {
+      if (other.postingRegistration != null)
+        return false;
+    } else if (!postingRegistration.equals(other.postingRegistration))
+      return false;
     if (title == null) {
       if (other.title != null)
         return false;
@@ -52,6 +63,8 @@ public class Board implements Serializable {
       return false;
     return true;
   }
+
+
 
   public int getBoardNumber() {
     return boardNumber;
@@ -83,6 +96,14 @@ public class Board implements Serializable {
 
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public Date getPostingRegistration() {
+    return postingRegistration;
+  }
+
+  public void setPostingRegistration(Date postingRegistration) {
+    this.postingRegistration = postingRegistration;
   }
 
 
