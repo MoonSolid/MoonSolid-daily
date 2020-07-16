@@ -15,6 +15,7 @@
 	  <th>번호</th>
 		<th>제목</th>
 		<th>내용</th>
+		<th>등록일</th>
 	</thead>
 
 	<tbody>	
@@ -25,7 +26,8 @@
         style="color:black; cursor:pointer;">   
 			<td>${board.boardNumber}</td>
 			<td>${board.title}</td>
-			<td>${board.content}</td>	
+			<td>${board.content}</td>
+			<td>${board.postingRegistration}</td>	
 		</tr>
 			</c:forEach>
   </tbody>
