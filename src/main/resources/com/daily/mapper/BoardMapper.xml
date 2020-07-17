@@ -70,5 +70,11 @@
     set
     view_count = view_count + 1 where board_no = #{boardNumber}
   </update>
+  
+  <select id="listCount" resultType="int" parameterType="int">
+    select
+    count(*)
+    from board
+  </select>
 
 </mapper>

@@ -59,4 +59,11 @@ public class BoardServiceImpl implements BoardService {
     return boardDao.viewCount(boardNumber);
   }
 
+
+  @Override
+  public int listCount(Board board) throws Exception {
+    return boardDao.listCount();
+  }
+
+
 }

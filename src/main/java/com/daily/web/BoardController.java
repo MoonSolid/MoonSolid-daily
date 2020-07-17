@@ -66,7 +66,10 @@ public class BoardController {
   @GetMapping("list")
   public void list(Board board, Model model) throws Exception {
     List<Board> boards = boardService.list();
+    int listCount = boardService.listCount(board);
     model.addAttribute("boards", boards);
+    model.addAttribute("listCount", listCount);
+
   }
 
 }

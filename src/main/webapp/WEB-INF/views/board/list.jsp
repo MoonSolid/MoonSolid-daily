@@ -8,6 +8,9 @@
 <h1 style="font-weight:bold; text-align:left; font-size:1.8rem; margin-left:1rem;">게시글 목록</h1>
 
 <hr>
+<p style="text-align:left">
+전체게시글  (<c:out value="${listCount}"/>) 개
+<p>
 <!------------------------------------게시글목록------------------------------------------------------>
 <div>
 <table id="listTable" class="table table-striped table-hover">
