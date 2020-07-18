@@ -13,7 +13,7 @@
 <p>
 <!------------------------------------게시글목록------------------------------------------------------>
 <div>
-<table id="listTable" class="table table-striped table-hover">
+<table id="listTable" class="table table-striped table-hover" border="1">
 	<thead>
 	  <th>번호</th>
 		<th>제목</th>
