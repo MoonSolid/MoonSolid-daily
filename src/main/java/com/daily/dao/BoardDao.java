@@ -19,4 +19,6 @@ public interface BoardDao {
 
   public int listCount() throws Exception;
 
+  public List<Board> findMore(int lastNo) throws Exception;
+
 }

@@ -65,5 +65,9 @@ public class BoardServiceImpl implements BoardService {
     return boardDao.listCount();
   }
 
+  @Override
+  public List<Board> listMore(int lastNo) throws Exception {
+    return boardDao.findMore(lastNo);
+  }
 
 }

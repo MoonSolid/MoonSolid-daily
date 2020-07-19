@@ -11,12 +11,13 @@
 		<result column="view_count" property="viewCount" />
 		<result column="content" property="content" />
 		<result column="posting_registration"
-      property="postingRegistration" />
+			property="postingRegistration" />
 	</resultMap>
 
 	<insert id="insert" parameterType="Board"
 		useGeneratedKeys="true" keyColumn="board_no" keyProperty="boardNumber">
-		insert into board(
+		insert into
+		board(
 		title,
 		content,
 		posting_registration,
@@ -37,6 +38,7 @@
 		from board
 		order by
 		board_no desc
+		limit 0, 5
 	</select>
 
 	<select id="findByNo" resultMap="BoardMap" parameterType="int">
@@ -45,7 +47,7 @@
 		title,
 		view_count,
 		content
-		from board	
+		from board
 		where
 		board_no=#{boardNumber}
 	</select>
@@ -55,26 +57,43 @@
 		where
 		board_no=#{boardNumber}
 	</delete>
-	
+
 	<update id="update" parameterType="Board">
-    update board
-    <set>
-      <if test="title != null and title != ''">title=#{title},</if>
-      <if test="content != null and content != ''">content=#{content}</if>
-    </set>
-    where board_no=#{boardNumber}
-  </update>
-	
+		update board
+		<set>
+			<if test="title != null and title != ''">title=#{title},</if>
+			<if test="content != null and content != ''">content=#{content}</if>
+		</set>
+		where board_no=#{boardNumber}
+	</update>
+
 	<update id="viewCount" parameterType="int">
-    update board
-    set
-    view_count = view_count + 1 where board_no = #{boardNumber}
-  </update>
-  
-  <select id="listCount" resultType="int" parameterType="int">
+		update board
+		set
+		view_count =
+		view_count + 1 where board_no = #{boardNumber}
+	</update>
+
+	<select id="listCount" resultType="int" parameterType="int">
+		select
+		count(*)
+		from board
+	</select>
+
+	<select id="findMore" resultMap="BoardMap" parameterType="int">
+     <![CDATA[
     select
-    count(*)
-    from board
-  </select>
+    board_no,
+    title,
+    content,
+    view_count,
+    posting_registration     
+   where
+   board_no < #{lastNo}
+    order by
+    board_no desc
+    limit 0, 5
+          ]]>
+	</select>
 
 </mapper>

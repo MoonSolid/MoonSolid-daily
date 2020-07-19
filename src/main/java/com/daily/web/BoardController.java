@@ -71,5 +71,11 @@ public class BoardController {
     model.addAttribute("listCount", listCount);
 
   }
+  
+  @GetMapping("listMore")
+  public void listMore(@RequestParam(defaultValue = "1") int lastNo, Model model) throws Exception { 
+    List<Board> boards = boardService.listMore(lastNo);
+    model.addAttribute("boards",boards);
+  }
 
 }
