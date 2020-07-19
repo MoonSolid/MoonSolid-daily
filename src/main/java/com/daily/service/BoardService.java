@@ -18,4 +18,6 @@ public interface BoardService {
   int viewCount(int boardNumber) throws Exception;
 
   int listCount(Board board) throws Exception;
+
+  List<Board> listMore(int lastNo) throws Exception;
 }

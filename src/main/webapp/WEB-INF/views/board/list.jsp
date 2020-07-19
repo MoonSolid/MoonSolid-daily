@@ -37,6 +37,14 @@
 </table>
 </div>
 <!-----------------------------------/게시글목록------------------------------------------------------>
+<!--------------------------------------더보기------------------------------------------------------->
+<button id="moreListBtn" 
+        class="container py-1 btn btn-secondary btn-lg btn-block" 
+        style="width: 300px;height: 50px;margin-bottom: 1.3rem;">더보기
+</button>
+
+<!-------------------------------------/더보기------------------------------------------------------->
+
 <hr>
 <!-----------------------------------글쓰기---------------------------------------------------------->
 <div style="text-align:right">
@@ -45,3 +53,26 @@
 <!----------------------------------/글쓰기---------------------------------------------------------->
 <br>
 </div>
+
+<script>
+<%-------------------------------------------더보기 ------------------------------------------------%>
+var tag1 = document.getElementById("moreListBtn");
+var tbody = document.querySelector("#listTable > tbody");
+
+tag1.onclick = function() {
+  var lastNo = parseInt(document.querySelector("#listTable > tbody > tr:last-child > td:nth-child(1)").innerHTML);
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'listMore?lastNo=' + lastNo, false);
+  xhr.send();
+  tbody.innerHTML = tbody.innerHTML + xhr.responseText;
+  
+  if(xhr.responseText == "") {
+    Swal.fire({
+      title : '더이상 게시글이 없습니다.',
+      icon : 'warning',
+      timer : 3000
+    })
+  }
+};
+<%------------------------------------------/더보기 ------------------------------------------------%>
+</script>
