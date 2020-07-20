@@ -87,7 +87,8 @@
     title,
     content,
     view_count,
-    posting_registration     
+    posting_registration 
+    from board    
    where
    board_no < #{lastNo}
     order by
