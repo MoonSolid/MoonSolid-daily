@@ -11,21 +11,25 @@ public class Board implements Serializable {
   private int viewCount;
   private String content;
   private Date postingRegistration;
-
+  private Date startDated;
+  private Date endDated;
+  
   @Override
   public String toString() {
     return "Board [boardNumber=" + boardNumber + ", title=" + title + ", viewCount=" + viewCount
-        + ", content=" + content + ", postingRegistration=" + postingRegistration + "]";
+        + ", content=" + content + ", postingRegistration=" + postingRegistration + ", startDated="
+        + startDated + ", endDated=" + endDated + "]";
   }
-
-
+  
   @Override
   public int hashCode() {
     final int prime = 31;
     int result = 1;
     result = prime * result + boardNumber;
     result = prime * result + ((content == null) ? 0 : content.hashCode());
+    result = prime * result + ((endDated == null) ? 0 : endDated.hashCode());
     result = prime * result + ((postingRegistration == null) ? 0 : postingRegistration.hashCode());
+    result = prime * result + ((startDated == null) ? 0 : startDated.hashCode());
     result = prime * result + ((title == null) ? 0 : title.hashCode());
     result = prime * result + viewCount;
     return result;
@@ -49,10 +53,20 @@ public class Board implements Serializable {
         return false;
     } else if (!content.equals(other.content))
       return false;
+    if (endDated == null) {
+      if (other.endDated != null)
+        return false;
+    } else if (!endDated.equals(other.endDated))
+      return false;
     if (postingRegistration == null) {
       if (other.postingRegistration != null)
         return false;
     } else if (!postingRegistration.equals(other.postingRegistration))
+      return false;
+    if (startDated == null) {
+      if (other.startDated != null)
+        return false;
+    } else if (!startDated.equals(other.startDated))
       return false;
     if (title == null) {
       if (other.title != null)
@@ -106,6 +120,23 @@ public class Board implements Serializable {
     this.postingRegistration = postingRegistration;
   }
 
+  public Date getStartDated() {
+    return startDated;
+  }
+
+  public void setStartDated(Date startDated) {
+    this.startDated = startDated;
+  }
+
+  public Date getEndDated() {
+    return endDated;
+  }
+
+  public void setEndDated(Date endDated) {
+    this.endDated = endDated;
+  }
+
+  
 
 
 }
