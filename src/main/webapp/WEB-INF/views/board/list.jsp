@@ -24,6 +24,8 @@
 				<th>제목</th>
 				<th>내용</th>
 				<th>등록일</th>
+				<th>시작일</th>
+				<th>마감일</th>
 			</thead>
 
 			<tbody>
@@ -37,6 +39,8 @@
 						<td>${board.title}</td>
 						<td>${board.content}</td>
 						<td>${board.postingRegistration}</td>
+						<td>${board.startDated}</td>
+						<td>${board.endDated}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

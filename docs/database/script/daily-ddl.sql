@@ -37,7 +37,9 @@ CREATE TABLE board (
     title VARCHAR(255) NULL COMMENT '제목', -- 제목
     view_count INTEGER NOT NULL COMMENT '조회수', -- 조회수
     content VARCHAR(255) NULL COMMENT '내용', -- 내용
-    posting_registration TIMESTAMP DEFAULT NOW() COMMENT '등록일' -- 등록일
+    posting_registration TIMESTAMP DEFAULT NOW() COMMENT '등록일', -- 등록일
+    start_dated          DATETIME     NOT NULL COMMENT '시작일', -- 시작일
+  end_dated            DATETIME     NOT NULL COMMENT '마감일' -- 마감일
 );
 
 -- 게시글

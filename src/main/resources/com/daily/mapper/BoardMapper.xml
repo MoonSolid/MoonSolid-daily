@@ -12,6 +12,9 @@
 		<result column="content" property="content" />
 		<result column="posting_registration"
 			property="postingRegistration" />
+		<result column="start_dated" property="startDated" />
+		<result column="end_dated" property="endDated" />
+
 	</resultMap>
 
 	<insert id="insert" parameterType="Board"
@@ -21,12 +24,16 @@
 		title,
 		content,
 		posting_registration,
-		view_count)
+		view_count,
+		start_dated,
+		end_dated)
 		values(
 		#{title},
 		#{content},
 		now(),
-		0)
+		0,
+		#{startDated},
+		#{endDated})
 	</insert>
 
 	<select id="findAll" resultMap="BoardMap">
@@ -34,7 +41,9 @@
 		board_no,
 		title,
 		content,
-		posting_registration
+		posting_registration,
+		start_dated,
+		end_dated
 		from board
 		order by
 		board_no desc
@@ -46,7 +55,9 @@
 		board_no,
 		title,
 		view_count,
-		content
+		content,
+		start_dated,
+		end_dated
 		from board
 		where
 		board_no=#{boardNumber}
@@ -62,7 +73,9 @@
 		update board
 		<set>
 			<if test="title != null and title != ''">title=#{title},</if>
-			<if test="content != null and content != ''">content=#{content}</if>
+			<if test="content != null and content != ''">content=#{content},</if>
+			<if test="startDated != null">start_dated=#{startDated},</if>
+			<if test="endDated != null">end_dated=#{endDated}</if>
 		</set>
 		where board_no=#{boardNumber}
 	</update>
@@ -87,7 +100,9 @@
     title,
     content,
     view_count,
-    posting_registration 
+    posting_registration, 
+    start_dated,
+	end_dated
     from board    
    where
    board_no < #{lastNo}

@@ -26,7 +26,12 @@
 					<!---------------------------------------------내용------------------------------------------------->
 					<textarea id="content" name='content' rows='10' cols='40'></textarea>
 					<!--------------------------------------------/내용------------------------------------------------->
-
+<br> 시작일* <input id="startDated" autocomplete="off"
+							placeholder="시작일" type='date' name='startDated'
+							class="form-control datepicker" value='${board.startDated}'>
+<br> 마감일* <input id="endDated" autocomplete="off"
+							placeholder="마감일" type='date' name='endDated'
+							class="form-control datepicker" value='${board.endDated}'>
 
 					<!-------------------------------------------- /컨텐츠 ------------------------------------------------>
 					<br> <br>

@@ -18,7 +18,9 @@
 			</h4>
 			
 			조회수 : ${board.viewCount} <br>
-			내용 : ${board.content} 
+			내용 : ${board.content} <br>
+			시작일 : ${board.startDated} <br>
+			마감일 : ${board.endDated} <br>
 			<hr>
 			<br>
 		</div>
