@@ -9,6 +9,18 @@
 		style="font-weight: bold; text-align: left; font-size: 1.8rem; margin-left: 1rem;">게시글
 		목록</h1>
 
+	<!--------------------------------------게시글검색----------------------------------------------------->
+	<div id="searchForm" style="text-align: right">
+		<form action='search' method='get'>
+			<input id='keyword' name='keyword' type='text'>
+			<button aria-label="Global Search" type="submit"
+				class="btn bg-transparent shadow-none m-0 px-2 py-1 text-muted">
+				<i class="fi fi-search fs--20"></i>
+			검색</button>
+		</form>
+	</div>
+	<!-------------------------------------/게시글검색----------------------------------------------------->
+
 	<hr>
 	<p style="text-align: left">
 		전체게시글 (
@@ -48,7 +60,7 @@
 	</div>
 	<!-----------------------------------/게시글목록------------------------------------------------------>
 	<!--------------------------------------더보기------------------------------------------------------->
-	<button id="moreListBtn"		
+	<button id="moreListBtn"
 		style="width: 300px; height: 50px; margin-bottom: 1.3rem;">더보기
 	</button>
 

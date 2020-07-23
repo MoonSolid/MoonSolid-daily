@@ -77,5 +77,10 @@ public class BoardController {
     List<Board> boards = boardService.listMore(lastNo);
     model.addAttribute("boards",boards);
   }
+  
+  @GetMapping("search")
+  public void search(String keyword, Model model) throws Exception {
+    model.addAttribute("list", boardService.search(keyword));
+  }
 
 }

@@ -1,6 +1,7 @@
 package com.daily.dao;
 
 import java.util.List;
+
 import com.daily.domain.Board;
 
 public interface BoardDao {
@@ -20,5 +21,7 @@ public interface BoardDao {
   public int listCount() throws Exception;
 
   public List<Board> findMore(int lastNo) throws Exception;
+  
+  List<Board> findByKeyword(String keyword) throws Exception;
 
 }

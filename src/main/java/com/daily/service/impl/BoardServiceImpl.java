@@ -1,6 +1,7 @@
 package com.daily.service.impl;
 
 import java.util.List;
+
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,6 +69,11 @@ public class BoardServiceImpl implements BoardService {
   @Override
   public List<Board> listMore(int lastNo) throws Exception {
     return boardDao.findMore(lastNo);
+  }
+  
+  @Override
+  public List<Board> search(String keyword) throws Exception {
+    return boardDao.findByKeyword(keyword);
   }
 
 }

@@ -1,6 +1,7 @@
 package com.daily.service;
 
 import java.util.List;
+
 import com.daily.domain.Board;
 
 public interface BoardService {
@@ -20,4 +21,6 @@ public interface BoardService {
   int listCount(Board board) throws Exception;
 
   List<Board> listMore(int lastNo) throws Exception;
+  
+  List<Board> search(String keyword) throws Exception;
 }
