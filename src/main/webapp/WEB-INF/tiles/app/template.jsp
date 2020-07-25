@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body class="header-sticky">
-<script src="${pageContext.request.getContextPath()}/resources/assets/js/core.min.js"></script>
+<script src="${pageContext.request.getContextPath()}/resources/assets/js/core.js"></script>
 	<div id="wrapper">
 		<tiles:insertAttribute name="header" />
 		<tiles:insertAttribute name="body" />
