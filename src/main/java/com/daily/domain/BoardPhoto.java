@@ -78,8 +78,9 @@ public class BoardPhoto implements Serializable {
     return filePath;
   }
 
-  public void setFilePath(String filePath) {
+  public BoardPhoto setFilePath(String filePath) {
     this.filePath = filePath;
+    return this;
   }
 
 
