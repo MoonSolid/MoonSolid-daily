@@ -2,29 +2,29 @@ package com.daily.domain;
 
 import java.io.Serializable;
 
-public class BoardThumbnail implements Serializable {
+public class BoardPhoto implements Serializable {
   private static final long serialVersionUID = 1L;
 
-  private int boardThumbnailNumber;
+  private int boardPhotoNumber;
   private int boardNumber;
   private String filePath;
   
-  public BoardThumbnail() {}
+  public BoardPhoto() {}
   
-  public BoardThumbnail(String filePath, int boardNunmber) {
+  public BoardPhoto(String filePath, int boardNunmber) {
     this.filePath = filePath;
     this.boardNumber = boardNunmber;
   }
   
-  public BoardThumbnail(int boardThumbnailNumber, String filePath, int boardNumber)  {
+  public BoardPhoto(int boardPhotoNumber, String filePath, int boardNumber)  {
     this(filePath, boardNumber);
-    this.boardThumbnailNumber = boardThumbnailNumber;
+    this.boardPhotoNumber = boardPhotoNumber;
   }
 
   @Override
   public String toString() {
-    return "BoardThumbnail [boardThumbnailNumber=" + boardThumbnailNumber + ", boardNumber="
-        + boardNumber + ", filePath=" + filePath + "]";
+    return "BoardPhoto [boardPhotoNumber=" + boardPhotoNumber + ", boardNumber=" + boardNumber
+        + ", filePath=" + filePath + "]";
   }
 
   @Override
@@ -32,7 +32,7 @@ public class BoardThumbnail implements Serializable {
     final int prime = 31;
     int result = 1;
     result = prime * result + boardNumber;
-    result = prime * result + boardThumbnailNumber;
+    result = prime * result + boardPhotoNumber;
     result = prime * result + ((filePath == null) ? 0 : filePath.hashCode());
     return result;
   }
@@ -45,10 +45,10 @@ public class BoardThumbnail implements Serializable {
       return false;
     if (getClass() != obj.getClass())
       return false;
-    BoardThumbnail other = (BoardThumbnail) obj;
+    BoardPhoto other = (BoardPhoto) obj;
     if (boardNumber != other.boardNumber)
       return false;
-    if (boardThumbnailNumber != other.boardThumbnailNumber)
+    if (boardPhotoNumber != other.boardPhotoNumber)
       return false;
     if (filePath == null) {
       if (other.filePath != null)
@@ -58,12 +58,12 @@ public class BoardThumbnail implements Serializable {
     return true;
   }
 
-  public int getBoardThumbnailNumber() {
-    return boardThumbnailNumber;
+  public int getBoardPhotoNumber() {
+    return boardPhotoNumber;
   }
 
-  public void setBoardThumbnailNumber(int boardThumbnailNumber) {
-    this.boardThumbnailNumber = boardThumbnailNumber;
+  public void setBoardPhotoNumber(int boardPhotoNumber) {
+    this.boardPhotoNumber = boardPhotoNumber;
   }
 
   public int getBoardNumber() {
@@ -81,7 +81,8 @@ public class BoardThumbnail implements Serializable {
   public void setFilePath(String filePath) {
     this.filePath = filePath;
   }
-  
+
+
   
   
 }

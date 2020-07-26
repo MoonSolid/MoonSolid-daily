@@ -51,4 +51,29 @@ ALTER TABLE board
   
 ALTER TABLE board
 MODIFY COLUMN board_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '게시글 번호';
+
+-- 게시글사진파일
+CREATE TABLE board_photo (
+  board_photo_no INTEGER      NOT NULL COMMENT '게시글사진파일번호', -- 게시글사진파일번호
+  board_no      INTEGER      NOT NULL COMMENT '게시글번호', -- 게시글번호
+  file_path           VARCHAR(255) NOT NULL COMMENT '파일경로' -- 파일경로
+)
+COMMENT '게시글사진파일';
+
+-- 게시글사진파일
+ALTER TABLE board_photo
+  ADD CONSTRAINT PK_board_photo -- 게시글사진파일 기본키
+    PRIMARY KEY (
+      board_photo_no -- 게시글사진파일번호
+    );
+
+-- 게시글사진파일 유니크 인덱스
+CREATE UNIQUE INDEX UIX_board_photo
+  ON pf_job_posting_file ( -- 게시글사진파일
+    board_no ASC, -- 게시글번호
+    file_path ASC       -- 파일경로
+  );
+
+ALTER TABLE board_photo
+  MODIFY COLUMN job_posting_file_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '채용공고첨부파일번호';
  
