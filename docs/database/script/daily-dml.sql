@@ -5,7 +5,7 @@ INSERT INTO board(board_no,title,view_count,content,posting_registration,start_d
 INSERT INTO board(board_no,title,view_count,content,posting_registration,start_dated,end_dated) VALUES(4,"제목4",1,"내용4",NOW(),'2020-1-1','2020-2-2');
 INSERT INTO board(board_no,title,view_count,content,posting_registration,start_dated,end_dated) VALUES(5,"제목5",1,"내용5",NOW(),'2020-1-1','2020-2-2');
 
--- pf_job_posting_file 채용공고첨부파일 데이터  (pf_job_posting 인서트 후)
+-- board_photo 게시글사진파일 데이터  (board 인서트 후)
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(1,1,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(2,2,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(3,3,'/file/path'); 

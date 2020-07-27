@@ -14,7 +14,7 @@
 	<insert id="insert" parameterType="Board">
 		insert into board_photo(board_no,file_path)
 		values
-		<foreach collection="files" item="file" separator=",">
+		<foreach collection="photos" item="file" separator=",">
 			(#{boardNumber}, #{file.filePath})
 		</foreach>
 	</insert>
