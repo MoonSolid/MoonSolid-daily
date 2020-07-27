@@ -15,6 +15,11 @@
 		<result column="start_dated" property="startDated" />
 		<result column="end_dated" property="endDated" />
 
+		<collection property="photos" ofType="BoardPhoto">
+		<id column="board_photo_no" property="boardPhotoNumber"/>
+		<result column="file_path" property="filePath"/>
+		</collection>
+
 	</resultMap>
 
 	<insert id="insert" parameterType="Board"
@@ -38,29 +43,36 @@
 
 	<select id="findAll" resultMap="BoardMap">
 		select
-		board_no,
-		title,
-		content,
-		posting_registration,
-		start_dated,
-		end_dated
-		from board
+		b.board_no,
+		b.title,
+		b.content,
+		b.posting_registration,
+		b.start_dated,
+		b.end_dated,
+		p.file_path
+		from board b
+		left outer join
+		board_photo p on b.board_no = p.board_no
 		order by
-		board_no desc
+		b.board_no
+		desc
 		limit 0, 5
 	</select>
 
 	<select id="findByNo" resultMap="BoardMap" parameterType="int">
 		select
-		board_no,
-		title,
-		view_count,
-		content,
-		start_dated,
-		end_dated
-		from board
+		b.board_no,
+		b.title,
+		b.view_count,
+		b.content,
+		b.start_dated,
+		b.end_dated,
+		p.file_path
+		from board b
+		left outer join
+		board_photo p on b.board_no = p.board_no
 		where
-		board_no=#{boardNumber}
+		b.board_no=#{boardNumber}
 	</select>
 
 	<delete id="delete" parameterType="int">
@@ -111,7 +123,7 @@
     limit 0, 5
           ]]>
 	</select>
-	
+
 	<select id="findByKeyword" resultMap="BoardMap"
 		parameterType="string">
 		<bind name="keywordPattern" value="'%' + _parameter + '%'" />
@@ -122,12 +134,12 @@
 		posting_registration,
 		start_dated,
 		end_dated
-		from 
+		from
 		board
 		where
 		title like #{keywordPattern}
-		or 
-		content	like #{keywordPattern}
+		or
+		content like #{keywordPattern}
 		or
 		start_dated like #{keywordPattern}
 		or

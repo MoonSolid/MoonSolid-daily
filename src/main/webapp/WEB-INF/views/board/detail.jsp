@@ -19,7 +19,16 @@
 			
 			조회수 : ${board.viewCount} <br>
 			내용 : ${board.content} <br>
-			
+					<!------------------------------------------ 사진 -------------------------------------------------->
+		<div>
+			<c:forEach items="${board.photos}" var="boardPhoto">
+				<img
+					src="${pageContext.servletContext.contextPath}/upload/board/${boardPhoto.filePath}"
+					width="100%">
+			</c:forEach>
+		</div>
+
+		<!------------------------------------------ /사진 ------------------------------------------------->
 			<!----------------------------------------- 남은시간 ------------------------------------------------>
 			<div class="col-12 col-xl-6 mb-3">
 				<div style="text-align: center">
