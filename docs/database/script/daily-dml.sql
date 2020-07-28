@@ -11,3 +11,9 @@ INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(2,2,'/file/pat
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(3,3,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(4,4,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(5,5,'/file/path');
+
+INSERT INTO members(member_no, id, pwd, name, email, tel, type) VALUES (1, 'moonsolid', PASSWORD('1111'), '문국대', 'yh0921k@gmail.com', '010-1234-5678', 1);
+INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo10', PASSWORD('2222'), '로그인봇1', 'moonsolid@naver.com', '010-9876-5432', 1);
+INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo20', PASSWORD('2222'), '로그인봇2', 'moonsolid@naver.com', '010-9876-5432', 1);
+INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo30', PASSWORD('2222'), '로그인봇3', 'moonsolid@naver.com', '010-9876-5432', 1);
+INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo40', PASSWORD('2222'), '로그인봇4', 'moonsolid@naver.com', '010-9876-5432', 1);

@@ -76,4 +76,33 @@ CREATE UNIQUE INDEX UIX_board_photo
 
 ALTER TABLE board_photo
   MODIFY COLUMN board_photo_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '게시글사진파일번호';
+  
+ -- 회원
+CREATE TABLE members (
+  member_no      INTEGER      NOT NULL COMMENT '회원번호', -- 회원번호
+  type           INTEGER      NOT NULL COMMENT '회원유형', -- 회원유형
+  id             VARCHAR(40)  NOT NULL COMMENT '아이디', -- 아이디
+  pwd            VARCHAR(255) NOT NULL COMMENT '비밀번호', -- 비밀번호
+  name           VARCHAR(30)  NOT NULL COMMENT '이름', -- 이름
+  email          VARCHAR(50)  NOT NULL COMMENT '이메일', -- 이메일
+  tel            VARCHAR(20)  NULL 	   COMMENT '연락처' -- 연락처
+)
+COMMENT '회원';
+
+-- 회원
+ALTER TABLE members
+  ADD CONSTRAINT PK_members -- 회원 기본키
+    PRIMARY KEY (
+      member_no -- 회원번호
+    );
+
+-- 회원 유니크 인덱스
+CREATE UNIQUE INDEX UIX_members
+  ON members ( -- 회원
+    id ASC,    -- 아이디
+    email ASC  -- 이메일
+  );
+
+ALTER TABLE members
+  MODIFY COLUMN member_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '회원번호';
  
