@@ -5,7 +5,7 @@ INSERT INTO board(board_no,title,view_count,content,posting_registration,start_d
 INSERT INTO board(board_no,title,view_count,content,posting_registration,start_dated,end_dated) VALUES(4,"제목4",1,"내용4",NOW(),'2020-1-1','2020-2-2');
 INSERT INTO board(board_no,title,view_count,content,posting_registration,start_dated,end_dated) VALUES(5,"제목5",1,"내용5",NOW(),'2020-1-1','2020-2-2');
 
--- board_photo 게시글사진파일 데이터  (board 인서트 후)
+-- board_photo 게시글사진파일 샘플 데이터  (board 인서트 후)
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(1,1,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(2,2,'/file/path'); 
 INSERT INTO board_photo(board_photo_no,board_no,file_path) VALUES(3,3,'/file/path'); 
@@ -17,3 +17,10 @@ INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo10', PASSWORD
 INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo20', PASSWORD('2222'), '로그인봇2', 'moonsolid33@naver.com', '010-9876-5437', 1);
 INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo30', PASSWORD('2222'), '로그인봇3', 'moonsolid44@naver.com', '010-9876-5438', 1);
 INSERT INTO members(id, pwd, name, email, tel, type) VALUES ('rnreo40', PASSWORD('2222'), '로그인봇4', 'moonsolid55@naver.com', '010-9876-5439', 1);
+
+-- 일반회원 샘플 데이터
+INSERT INTO general_member(general_member_no) VALUES (1);
+INSERT INTO general_member(general_member_no) VALUES (2);
+INSERT INTO general_member(general_member_no) VALUES (3);
+INSERT INTO general_member(general_member_no) VALUES (4);
+INSERT INTO general_member(general_member_no) VALUES (5);

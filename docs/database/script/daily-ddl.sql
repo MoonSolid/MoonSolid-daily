@@ -105,4 +105,19 @@ CREATE UNIQUE INDEX UIX_members
 
 ALTER TABLE members
   MODIFY COLUMN member_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '회원번호';
+  
+-- 일반회원
+CREATE TABLE general_member (
+  general_member_no INTEGER      NOT NULL COMMENT '일반회원번호' -- 일반회원번호
+)
+COMMENT '일반회원';
+
+-- 일반회원
+ALTER TABLE general_member
+  ADD CONSTRAINT PK_general_member -- 일반회원 기본키
+    PRIMARY KEY (
+      general_member_no -- 일반회원번호
+    );
  
+ ALTER TABLE general_member
+  MODIFY COLUMN general_member_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '일반회원번호';   
