@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.daily.dao.GeneralMemberDao">
+
+	<resultMap type="GeneralMember" id="GeneralMemberMap">
+		<id column="general_member_no" property="number" />
+		<result column="pwd" property="password" />
+		<result column="name" property="name" />
+		<result column="email" property="email" />
+		<result column="tel" property="tel" />
+		<result column="type" property="type" />
+	</resultMap>
+
+	<insert id="insert" parameterType="GeneralMember">
+		INSERT INTO
+		general_member(general_member_no)
+		VALUES(#{number})
+	</insert>
+
+  <select id="findAll" resultMap="GeneralMemberMap">
+    SELECT *
+    FROM general_member
+  </select>
+
+</mapper>
