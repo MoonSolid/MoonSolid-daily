@@ -25,5 +25,14 @@
     SELECT *
     FROM general_member
   </select>
+  
+  <select id="findByEmailAndPassword" resultMap="GeneralMemberMap"
+  parameterType="map">
+  SELECT g.general_member_no, m.email, m.id, m.type, m.name
+  FROM members m JOIN general_member g
+  ON m.member_no = g.general_member_no
+  <if test="password != null">WHERE (m.id=#{email} OR m.email=#{email}) AND
+			m.pwd=password(#{password})</if>
+  </select>
 
 </mapper>
