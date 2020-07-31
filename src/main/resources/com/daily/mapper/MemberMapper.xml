@@ -24,5 +24,13 @@
 		(#{id}, PASSWORD(#{password}), #{name}, #{email},
 		#{tel}, #{type})
 	</insert>
+	
+	<select id="findByEmailAndPassword" resultMap="MemberMap"
+	parameterType="map">
+	SELECT member_no, type, id, name, email
+	FROM
+	members
+	WHERE (id=#{email} OR email=#{email}) AND pwd=password(#{password})
+	</select>
 
 </mapper>
