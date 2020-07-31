@@ -9,4 +9,7 @@ public interface MemberService {
   int add(Member member, GeneralMember generalMember) throws Exception;
   
   List<GeneralMember> findAll() throws Exception;
+  
+  Member login(String email, String password) throws Exception;
+  
 }
