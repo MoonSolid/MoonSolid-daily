@@ -1,5 +1,6 @@
 package com.daily.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -43,4 +44,26 @@ public class MemberServiceImpl implements MemberService {
     return generalMemberDao.findAll();
   }
 
+  // 일반회원 로그인
+  @Override
+  public Member login(String email, String password) throws Exception {
+    HashMap<String, Object> params = new HashMap<>();
+    params.put("email", email);
+    params.put("password", password);
+    
+    try {
+      int type = memberDao.findByEmailAndPassword(params).getType();
+      
+      if (type == 1) {
+        return generalMemberDao.findByEmailAndPassword(params);
+      } else {
+        return null;
+      }
+      
+    } catch (Exception e) {
+      throw new Exception("로그인에 실패하였습니다. <br>아이디 혹은 비밀번호를 확인해주세요.");      
+    }
+  }
+  
+  
 }
