@@ -15,7 +15,7 @@
 <form action="generalJoin" method="POST" onsubmit="return check();">
 
 <!-- 아이디 -->
-<divs>
+<div>
 <input required placeholder="아이디 *" name="id" type="text" class="form-control"/>
 </div>
 <!-- /아이디 -->
