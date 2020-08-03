@@ -19,5 +19,14 @@
   <definition name="main.do" extends="empty">
     <put-attribute name="body" value ="/WEB-INF/views/index.jsp"/>
   </definition>
-
+  
+<definition name="auth/loginForm.do" extends="empty">
+    <put-attribute name="body" value ="/WEB-INF/views/auth/loginForm.jsp"/>
+  </definition>
+  
+   <definition name="member/generalJoin.do" extends="empty">
+    <put-attribute name="body" value ="/WEB-INF/views/member/generalJoin.jsp"/>
+  </definition>
+  
+  
 </tiles-definitions>
