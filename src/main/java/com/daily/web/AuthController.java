@@ -3,6 +3,7 @@ package com.daily.web;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +67,12 @@ public class AuthController {
       throw new Exception("로그인에 실패하였습니다. <br>아이디 혹은 비밀번호를 확인해주세요.");
     }
   } 
+  
+  @GetMapping("logout")
+  public String logout(HttpSession session) {
+    session.invalidate();
+    return "redirect:/";
+  }
   
   
 }
