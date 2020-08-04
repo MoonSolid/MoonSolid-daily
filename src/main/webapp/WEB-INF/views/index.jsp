@@ -77,6 +77,9 @@
 						class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore font-weight-medium pt-3 pb-3">
 							<i class="fi fi-power float-start"></i> Log Out
 					</a></li>
+					<li>
+					${loginUser.name}님 환영합니다.
+					</li>
 				</c:if>
 
 			</ul>
