@@ -88,6 +88,10 @@
 
 		<div id="container">
 			<p>container</p>
+			<div>
+			<a href="/MoonSolid-daily/app/board/list">
+			게시글</a>
+			</div>
 		</div>
 
 		<div id="footer">
