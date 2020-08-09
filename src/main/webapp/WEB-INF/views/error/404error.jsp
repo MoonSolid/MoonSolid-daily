@@ -10,7 +10,6 @@ response.setStatus(200);
 
 <div>
 
-<h2 class="h4 mb-4 font-weight-normal ml-4 text-muted">${error}</h2>
 <hr>
 
 <h2 class="h4 mb-4 font-weight-normal">페이지를 찾을 수 없습니다.
