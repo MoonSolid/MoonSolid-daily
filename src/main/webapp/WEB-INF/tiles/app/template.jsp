@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="${pageContext.request.getContextPath()}/resources/assets/css/core.css">
 </head>
 <body class="header-sticky">
 <script src="${pageContext.request.getContextPath()}/resources/assets/js/core.js"></script>
