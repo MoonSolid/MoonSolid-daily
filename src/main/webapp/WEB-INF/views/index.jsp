@@ -17,8 +17,7 @@
   href="${pageContext.request.getContextPath()}/resources/assets/css/core.css">
 </head>
 <body>
-q
-	<div id="wrap">
+	<div id="wrapper">
 
 		<div id="header">
 			<p>header</p>
