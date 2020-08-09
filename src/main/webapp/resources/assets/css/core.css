@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-<<<<<<< HEAD
 *,
 *::before,
 *::after {
@@ -726,17 +725,6 @@ textarea {
     /*max-height: 60px !important;*/ }   
                               
 #wrapper {
-=======
-* {
-	margin: auto;
-	padding: auto;
-	list-style: none;
-	text-decoration: none;
-	text-align: center;
-}
-
-#wrap {
->>>>>>> 852c02f5c8a006cb0cb3ee0e9a9aa647baf22040
 	width: 100%;
 	height: 100%;
 	background-color: skyblue;
@@ -759,11 +747,8 @@ textarea {
 	width: 100%;
 	height: 10%;
 	background-color: darkviolet;
-<<<<<<< HEAD
 }
 
 .navbar-brand {
 	margin-right: 50px;
-=======
->>>>>>> 852c02f5c8a006cb0cb3ee0e9a9aa647baf22040
 }
