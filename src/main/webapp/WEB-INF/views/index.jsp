@@ -13,42 +13,8 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-<style>
-* {
-	margin: auto;
-	padding: auto;
-	list-style: none;
-	text-decoration: none;
-	text-align: center;
-}
-
-#wrap {
-	width: 100%;
-	height: 100%;
-	background-color: skyblue;
-	float: auto;
-}
-
-#header {
-	width: 100%;
-	height: 10%;
-	background-color: pink;
-}
-
-#container {
-	width: 100%;
-	height: 80%;
-	background-color: darkgrey;
-}
-
-#footer {
-	width: 100%;
-	height: 10%;
-	background-color: darkviolet;
-}
-</style>
-
+<link rel="stylesheet"
+  href="${pageContext.request.getContextPath()}/resources/assets/css/core.css">
 </head>
 <body>
 
