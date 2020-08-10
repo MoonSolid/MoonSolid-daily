@@ -2,5 +2,9 @@
 
 <!-- footer -->
 <footer id="footer" class="footer-dark position-relative">
-	
+	<div>
+	<p>footer</p>
+	<p>footer</p>
+	<p>footer</p>
+	</div>
 </footer>

@@ -7,13 +7,18 @@
 <!-- HEADER -->
 <header id="header" class="shadow-xs z-index-1000"> 
 
+
 <div class="container position-relative">
+
 <nav>
  <a class="navbar-brand" href="/MoonSolid-daily"><img
           src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
           width="150" height="20" alt="...">
         </a>
         </nav>
+      
+      
+        
 </div>
 
 

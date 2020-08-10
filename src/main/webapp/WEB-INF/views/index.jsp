@@ -31,7 +31,7 @@
 
 					<li
 						class="list-inline-item ml--6 mr--6 float-start d-none d-lg-inline-block">
-						<a target="_blank" href="/MoonSolid-daily/app/auth/loginForm"
+						<a href="/MoonSolid-daily/app/auth/loginForm"
 						class="nav-link text-secondary" style="font-size: 1.1rem;">로그인</a>
 					</li>
 				</c:if>

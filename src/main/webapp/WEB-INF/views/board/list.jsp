@@ -4,7 +4,9 @@
 	pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="container" style="text-align: center; padding: 30px 0px;">
+
+<div id="container" style="text-align: center; padding: 30px 0px;">
+ <div class="row">
 	<h1
 		style="font-weight: bold; text-align: left; font-size: 1.8rem; margin-left: 1rem;">게시글
 		목록</h1>
@@ -57,6 +59,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		</div>
 	</div>
 	<!-----------------------------------/게시글목록------------------------------------------------------>
 	<!--------------------------------------더보기------------------------------------------------------->
