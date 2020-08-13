@@ -24,3 +24,17 @@ INSERT INTO general_member(general_member_no) VALUES (2);
 INSERT INTO general_member(general_member_no) VALUES (3);
 INSERT INTO general_member(general_member_no) VALUES (4);
 INSERT INTO general_member(general_member_no) VALUES (5);
+
+-- 공지사항분류 샘플데이터 (notice_category)
+INSERT INTO notice_category (category_no, name) VALUES(0, "기타");
+INSERT INTO notice_category (category_no, name) VALUES(1, "로그인관련");
+INSERT INTO notice_category (category_no, name) VALUES(2, "상품관련");
+INSERT INTO notice_category (category_no, name) VALUES(3, "결제관련");
+INSERT INTO notice_category (category_no, name) VALUES(4, "배송관련");
+
+-- 공지사항 샘플데이터 (notice)
+INSERT INTO notice (board_no, category_no) VALUES(1,1);
+INSERT INTO notice (board_no, category_no) VALUES(2,2);
+INSERT INTO notice (board_no, category_no) VALUES(3,3);
+INSERT INTO notice (board_no, category_no) VALUES(4,4);
+INSERT INTO notice (board_no, category_no) VALUES(5,1);

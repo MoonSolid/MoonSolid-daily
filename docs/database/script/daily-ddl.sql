@@ -121,3 +121,31 @@ ALTER TABLE general_member
  
  ALTER TABLE general_member
   MODIFY COLUMN general_member_no INTEGER NOT NULL AUTO_INCREMENT COMMENT '일반회원번호';   
+  
+-- 공지사항
+CREATE TABLE notice (
+  board_no  INTEGER NOT NULL COMMENT '게시글번호', -- 게시글번호
+  category_no INTEGER NULL     COMMENT '공지사항분류번호' -- 공지사항분류번호
+)
+COMMENT '공지사항';
+
+-- 공지사항
+ALTER TABLE notice
+  ADD CONSTRAINT pf_notice -- 공지사항 기본키
+    PRIMARY KEY (
+      board_no -- 게시글번호
+    );  
+    
+-- 공지사항분류
+CREATE TABLE notice_category (
+  category_no INTEGER      NOT NULL COMMENT '공지사항분류번호', -- 공지사항분류번호
+  name      VARCHAR(255) NOT NULL COMMENT '분류명' -- 분류명
+)
+COMMENT '공지사항분류';
+
+-- 공지사항분류
+ALTER TABLE notice_category
+  ADD CONSTRAINT PK_notice_category -- 공지사항분류 기본키
+    PRIMARY KEY (
+      category_no -- 공지사항분류번호
+    );    
