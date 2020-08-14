@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.daily.dao.NoticeDao">
+	<resultMap type="Notice" id="NoticeMap">
+		<id column="category_no" property="categoryNumber" /> <!-- 게시글번호 -->
+		<id column="board_no" property="number" /><!-- 공지사항분류번호 -->
+		<result column="title" property="title" /><!-- 제목 -->
+		<result column="content" property="content" /><!-- 내용 -->
+		<result column="view_count" property="viewCount" /><!-- 조회수 -->
+		<result column="posting_registration" property="postingRegistration" /><!-- 
+			등록일 -->
+	</resultMap>		

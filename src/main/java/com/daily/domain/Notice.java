@@ -5,20 +5,20 @@ import java.io.Serializable;
 public class Notice extends Board implements Serializable {
   private static final long serialVersionUID = 1L;
   
-  private int noticeNumber;
-  private String noticeName;
+  private int categoryNumber;
+  private String categoryName;
   
   @Override
   public String toString() {
-    return "Notice [noticeNumber=" + noticeNumber + ", noticeName=" + noticeName + "]";
+    return "Notice [categoryNumber=" + categoryNumber + ", categoryName=" + categoryName + "]";
   }
 
   @Override
   public int hashCode() {
     final int prime = 31;
     int result = super.hashCode();
-    result = prime * result + ((noticeName == null) ? 0 : noticeName.hashCode());
-    result = prime * result + noticeNumber;
+    result = prime * result + ((categoryName == null) ? 0 : categoryName.hashCode());
+    result = prime * result + categoryNumber;
     return result;
   }
 
@@ -31,34 +31,33 @@ public class Notice extends Board implements Serializable {
     if (getClass() != obj.getClass())
       return false;
     Notice other = (Notice) obj;
-    if (noticeName == null) {
-      if (other.noticeName != null)
+    if (categoryName == null) {
+      if (other.categoryName != null)
         return false;
-    } else if (!noticeName.equals(other.noticeName))
+    } else if (!categoryName.equals(other.categoryName))
       return false;
-    if (noticeNumber != other.noticeNumber)
+    if (categoryNumber != other.categoryNumber)
       return false;
     return true;
   }
 
-  public int getNoticeNumber() {
-    return noticeNumber;
+  public int getCategoryNumber() {
+    return categoryNumber;
   }
 
-  public Notice setNoticeNumber(int noticeNumber) {
-    this.noticeNumber = noticeNumber;
+  public Notice setCategoryNumber(int categoryNumber) {
+    this.categoryNumber = categoryNumber;
     return this;
   }
 
-  public String getNoticeName() {
-    return noticeName;
+  public String getCategoryName() {
+    return categoryName;
   }
 
-  public Notice setNoticeName(String noticeName) {
-    this.noticeName = noticeName;
+  public Notice setCategoryName(String categoryName) {
+    this.categoryName = categoryName;
     return this;
   }
-  
  
   
 }
