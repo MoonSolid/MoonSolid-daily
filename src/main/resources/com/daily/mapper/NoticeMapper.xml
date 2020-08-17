@@ -10,6 +10,17 @@
 		<result column="title" property="title" /><!-- 제목 -->
 		<result column="content" property="content" /><!-- 내용 -->
 		<result column="view_count" property="viewCount" /><!-- 조회수 -->
-		<result column="posting_registration" property="postingRegistration" /><!-- 
-			등록일 -->
-	</resultMap>		
+		<result column="posting_registration"
+			property="postingRegistration" /><!-- 등록일 -->
+	</resultMap>
+
+	<insert id="insert" parameterType="Notice">
+		INSERT INTO notice (
+		board_no, category_no
+		)
+		VALUES(
+		#{number}, #{categoryNumber}
+		)
+	</insert>
+
+</mapper>
