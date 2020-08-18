@@ -12,6 +12,7 @@
 		<result column="view_count" property="viewCount" /><!-- 조회수 -->
 		<result column="posting_registration"
 			property="postingRegistration" /><!-- 등록일 -->
+			<result column="category_name" property="categoryName"/>
 	</resultMap>
 
 	<insert id="insert" parameterType="Notice">
