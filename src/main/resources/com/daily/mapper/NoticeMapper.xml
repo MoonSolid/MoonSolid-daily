@@ -23,5 +23,21 @@
 		#{number}, #{categoryNumber}
 		)
 	</insert>
+	
+	<select id="findAll" resultMap="NoticeMap" parameterType="Notice">
+	SELECT
+	n.category_no,
+	n.board_no,
+	c.name as category_name,
+	b.title,
+	b.content,
+	b.view_count,
+	b.posting_registration
+	FROM notice n LEFT OUTER JOIN notice_category c
+	ON n.category_no = c.category_no
+	LEFT OUTER JOIN board b
+	ON n.board_no = b.board_no
+	ORDER BY b.posting_registration desc, n.board_no desc
+	</select>
 
 </mapper>
