@@ -5,12 +5,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
-<div id="container" style="text-align: center; padding: 30px 0px;">
+<div id="container" style="text-align: center;">
  <div class="row">
 	<h1
 		style="font-weight: bold; text-align: left; font-size: 1.8rem; margin-left: 1rem;">게시글
 		목록</h1>
-
+    <br>
 	<!--------------------------------------게시글검색----------------------------------------------------->
 	<div id="searchForm" style="text-align: right">
 		<form action='search' method='get'>
