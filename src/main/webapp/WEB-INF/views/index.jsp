@@ -19,7 +19,7 @@
 <body>
 	<div id="wrapper">
 
-		<div id="header">
+		<div id="index-header">
 			<p>header</p>
 			
 			<ul class="navbar-nav fs--14">
@@ -51,7 +51,7 @@
 			
 		</div>
 
-		<div id="container">
+		<div id="index-container">
 			<p>container</p>
 			<div>
 			<a href="/MoonSolid-daily/app/board/list">
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 
-		<div id="footer">
+		<div id="index-footer">
 			<p>footer</p>
 		</div>
 
