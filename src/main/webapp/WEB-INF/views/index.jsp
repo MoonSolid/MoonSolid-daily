@@ -15,14 +15,143 @@
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet"
   href="${pageContext.request.getContextPath()}/resources/assets/css/core.css">
+  
+  <style>
+  
+  <style>
+        
+        #index-wrapper {
+            width:100%;
+            height:100%;
+        }
+        
+        #index-header {
+            width:100%;
+            height:15%;
+            background-color:pink;
+        }
+        
+        #index-header > #index-header1 {
+            width:15%;
+            height:100%;
+            background-color:red;
+            float:left;
+        }
+        
+        #index-header > #index-header2 {
+            width:70%;
+            height:100%; 
+            background-color:plum;
+            float:left;
+        }
+        
+        #index-header > #index-header3 {
+            width:15%;
+            height:100%;
+            background-color:darkgoldenrod;
+            float:left;
+        }
+        
+        #index-main-menu {
+         width:100%;    
+        }
+        
+        #index-main-menu,#index-sub-menu {
+            margin:0;
+            padding:0;
+            list-style-type:none;
+        }
+        
+        #index-main-menu > li {
+            width:25%;
+            float:left;            
+        }
+        
+        #index-main-menu > li > a {            
+            background-color:beige;
+            font-size:0.85rem;
+            text-align:center;
+            padding:12px 36px;
+            text-decoration:none;
+            display:block;
+            letter-spacing:0.05em;
+            border-right: 1px solid rgba(0,0,0,0.15);
+        }
+        
+        #index-sub-menu > li > a {                   
+            text-decoration:none; 
+        }
+        
+        #index-sub-menu {
+            width:17.3%;
+            position:absolute;
+            background-color:blueviolet;
+            visibility:hidden;
+            opacity:0;
+        }
+        
+        #index-sub-menu > li {           
+            margin:0;
+            padding:16px 28px;
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+        }
+        
+        #index-main-menu > li:hover #index-sub-menu { 
+            opacity:1;
+            visibility:visible;
+        }
+        
+    </style>
+  
+  </style>
+  
 </head>
 <body>
-	<div id="wrapper">
-
-		<div id="index-header">
-			<p>header</p>
-			
-			<ul class="navbar-nav fs--14">
+	 <div id="index-wrapper">
+       
+                          <div id="index-header">
+                            <div id="index-header1">logo</div>
+                            <div id="index-header2">
+                                <ul id="index-main-menu">
+                                    <li><a href="#">메인메뉴 1</a>
+                                    <ul id="index-sub-menu">
+                                        <li><a href="#">서브메뉴 1</a></li>
+                                        <li><a href="#">서브메뉴 2</a></li>
+                                        <li><a href="#">서브메뉴 3</a></li>
+                                        <li><a href="#">서브메뉴 4</a></li>
+                                    </ul>
+                                    </li>
+                                    <li><a href="#">메인메뉴 2</a>
+                                    <ul id="index-sub-menu">
+                                        <li><a href="#">서브메뉴 1</a></li>
+                                        <li><a href="#">서브메뉴 2</a></li>
+                                        <li><a href="#">서브메뉴 3</a></li>
+                                        <li><a href="#">서브메뉴 4</a></li>
+                                    </ul>
+                                    </li> 
+                                    <li><a href="#">메인메뉴 3</a>
+                                    <ul id="index-sub-menu">
+                                        <li><a href="#">서브메뉴 1</a></li>
+                                        <li><a href="#">서브메뉴 2</a></li>
+                                        <li><a href="#">서브메뉴 3</a></li>
+                                        <li><a href="#">서브메뉴 4</a></li>
+                                    </ul>
+                                    </li>
+                                    <li><a href="#">메인메뉴 4</a>
+                                    <ul id="index-sub-menu">
+                                        <li><a href="#">서브메뉴 1</a></li>
+                                        <li><a href="#">서브메뉴 2</a></li>
+                                        <li><a href="#">서브메뉴 3</a></li>
+                                        <li><a href="#">서브메뉴 4</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                            <div id="index-header3">
+                            
+                            <ul class="navbar-nav fs--14">
 			
 				<c:if test="${empty loginUser}">
 					<li class="nav-item"><a class="nav-link text-secondary"
@@ -48,22 +177,22 @@
 				</c:if>
 
 			</ul>
-			
-		</div>
-
-		<div id="index-container">
-			<p>container</p>
-			<div>
+                            
+                            </div>
+                            
+                            
+                          </div>
+                          
+                          
+                          <div id="index-container" style="width:100%; height:70%; background-color:gray;">
+<div>
 			<a href="/MoonSolid-daily/app/board/list">
 			게시글</a>
 			</div>
-		</div>
-
-		<div id="index-footer">
-			<p>footer</p>
-		</div>
-
-	</div>
+			</div>  
+                          <div id="index-footer" style="width:100%; height:15%; background-color:skyblue;" >footer</div>                   
+        
+    </div>    
 	<script
 		src="${pageContext.request.getContextPath()}/resources/assets/js/core.js"></script>
 </body>
