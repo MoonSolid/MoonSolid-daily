@@ -10,7 +10,7 @@
 				<nav>
 					<a class="navbar-brand" href="/MoonSolid-daily"><img
 						src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
-						alt="..." width="100%" height="100%"> </a>
+						alt="..." width="50%" height="42"> </a>
 				</nav>
 			</div>
 			<div id="header2">

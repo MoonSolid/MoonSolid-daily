@@ -26,7 +26,7 @@
 				<nav>
 					<a class="navbar-brand" href="/MoonSolid-daily"><img
 						src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
-						alt="..." width="100%" height="100%"> </a>
+						alt="..." width="50%" height="100%"> </a>
 				</nav>
 			</div>
 			<div id="index-header2">
@@ -97,7 +97,24 @@
 				<a href="/MoonSolid-daily/app/board/list"> 게시글</a>
 			</div>
 		</div>
-		<div id="index-footer">footer</div>
+		<div id="index-footer">
+		
+		<div id="index-footer.sns" style="width:100%; height:200px; background-color:red;">
+		 <h2 style="text-align:center; padding:50px 0px 0px;">SNS</h2>
+		  <hr>
+		</div>
+		
+		<div id="index-footer.inner" style="width:100%; height:300px; background-color:blue;">
+		<div id="index-CustomerCnter" style="width:20%; height:300px; background-color:#46B8FF; float:left;">CustomerCnter</div>
+		<div id="index-BankAccount" style="width:20%; height:300px; background-color:#3CAEFF; float:left;">BankAccount</div>
+		<div id="index-Community" style="width:20%; height:300px; background-color:#32A4FF; float:left;">Community</div>
+		<div id="index-MemberShip" style="width:20%; height:300px; background-color:#289AFF; float:left;">MemberShip</div>
+		<div id="index-Guide" style="width:20%; height:300px; background-color:#1E90FF; float:left;">Guide</div>
+		</div>
+		
+		<div id="index-company.info" style="width:100%; height:200px; background-color:green;">conpanyInfo</div>
+		 
+		</div>
 
 	</div>
 	<script
