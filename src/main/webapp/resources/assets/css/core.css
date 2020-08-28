@@ -6,7 +6,6 @@
 }
 
 /* index page */
-
 #index-wrapper {
 	width: 100%;
 	height: 100%;
@@ -14,114 +13,142 @@
 
 #index-header {
 	width: 100%;
+	height: 13em;
+	float: left;
+}
+
+#index-header_menu {
+	width: 100%;
 	height: 2.6em;
-	background-color:floralwhite;
 	float: left;
+	background-color:beige;
 }
 
-#index-header>#index-header1 {
-	width: 15%;
-	height: 100%;
-	float: left;
-}
-
-#index-header>#index-header2 {
-	width: 70%;
-	height: 100%;
-	float: left;
-}
-
-#index-header>#index-header3 {
-	width: 15%;
-	height: 100%;
-	float: left;
-}
-
-#index-main-menu, #index-sub-menu {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-#index-main-menu>li {
-	width: 25%;
-	float: left;
-}
-
-#index-main-menu>li>a {
-	font-size: 0.85rem;
-	text-align: center;
-	padding: 12px 36px;
-	text-decoration: none;
+#index-header_inner {
 	display: block;
-	letter-spacing: 0.05em;
-	border-right: 1px solid rgba(0, 0, 0, 0.15);
+	width: 300px;
+	height: 100%;
+	padding: 12px 1px 1px 1px;
+	float: right;
 }
 
-#index-sub-menu>li>a {
-	text-decoration: none;
-}
-
-#index-sub-menu {
-	width: 17.3%;
-	position: absolute;
-	background-color: blueviolet;
-	visibility: hidden;
-	opacity: 0;
-}
-
-#index-sub-menu>li {
-	margin: 0;
-	padding: 16px 28px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-#index-main-menu>li:hover #index-sub-menu {
-	opacity: 1;
-	visibility: visible;
-}
-
-#index-auth {
-    margin:0;
-    padding:0;
+#index-header_logo {
 	width: 100%;
-	list-style-type: none;
-}
-
-#index-auth>li {
-	width: 50%;
+	height: 7em;
 	float: left;
 }
 
-#index-auth>li>a {
-	font-size: 0.85rem;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	padding: 12px 36px;
-	letter-spacing:0.05em;
-	border-right: 1px solid rgba(0,0,0,0.15);	
-} 
-
-#index-main-menu {
+#index-header_category {
 	width: 100%;
+	height: 2.6em;
+	float: left;
 }
 
+#index-header_login > a {
+	display:block;
+	width: 50px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#index-header_joinus > a {
+	display:block;
+	width: 40px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#index-header_logout > a {
+	display:block;
+	width: 50px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#index-header_mypage {
+	width: 55px;
+	height: 100%;
+	float: right;
+}
+
+#index-header_cart {
+	width: 34px;
+	height: 100%;
+	float: right;
+}
+
+#index-header_bookmark {
+	width: 70px;
+	height: 100%;
+	float: right;
+}
+
+#index-header_home>img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px 0px 50px 0px;
+}
 #index-container {
 	width: 100%;
 	height: 1000px;
-	background-color: gray;
 }
 
 #index-footer {
 	width: 100%;
 	height: 40em;
-	background-color: skyblue;
 	float: left;
 }
- 
+
+#index-footer_sns {
+	width: 100%;
+	height: 200px;
+}
+
+#index-footer_inner {
+	width: 100%;
+	height: 300px;
+}
+
+#index-footer_CustomerCnter {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#index-footer_BankAccount {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#index-footer_Community {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#index-footer_MemberShip {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#index-footer_Guide {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#index-footer_company_info {
+	width: 100%;
+	height: 200px;
+}
+
 /* index page */
-                              
 #wrapper {
 	width: 100%;
 	float: left;
@@ -129,108 +156,141 @@
 
 #header {
 	width: 100%;
+	height: 13em;
+	float: left;
+}
+
+#header_menu {
+	width: 100%;
 	height: 2.6em;
-	background-color:floralwhite;
 	float: left;
+	background-color:beige;
 }
 
-#header>#header1 {
-	width: 15%;
-	height: 100%;
-	float: left;
-}
-
-#header>#header2 {
-	width: 70%;
-	height: 100%;
-	float: left;
-}
-
-#header>#header3 {
-	width: 15%;
-	height: 100%;
-	float: left;
-}
-
-#main-menu, #sub-menu {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-#main-menu>li {
-	width: 25%;
-	float: left;
-}
-
-#main-menu>li>a {
-	font-size: 0.85rem;
-	text-align: center;
-	padding: 12px 36px;
-	text-decoration: none;
+#header_inner {
 	display: block;
-	letter-spacing: 0.05em;
-	border-right: 1px solid rgba(0, 0, 0, 0.15);
+	width: 300px;
+	height: 100%;
+	padding: 12px 1px 1px 1px;
+	float: right;
 }
 
-#sub-menu>li>a {
-	text-decoration: none;
-}
-
-#sub-menu {
-	width: 17.3%;
-	position: absolute;
-	background-color: blueviolet;
-	visibility: hidden;
-	opacity: 0;
-}
-
-#sub-menu>li {
-	margin: 0;
-	padding: 16px 28px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-#main-menu>li:hover #sub-menu {
-	opacity: 1;
-	visibility: visible;
-}
-
-#auth {
-    margin:0;
-    padding:0;
+#header_logo {
 	width: 100%;
-	list-style-type: none;
-}
-
-#auth>li {
-	width: 50%;
+	height: 7em;
 	float: left;
 }
 
-#auth>li>a {
-	font-size: 0.85rem;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	padding: 12px 36px;
-	letter-spacing:0.05em;
-	border-right: 1px solid rgba(0,0,0,0.15);	
-} 
-
-#main-menu {
+#header_category {
 	width: 100%;
+	height: 2.6em;
+	float: left;
+}
+
+#header_login > a {
+	display:block;
+	width: 50px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#header_joinus > a {
+	display:block;
+	width: 40px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#header_logout > a {
+	display:block;
+	width: 50px;
+	height: 100%;
+	float: right;
+	text-decoration:none;
+}
+
+#header_mypage {
+	width: 55px;
+	height: 100%;
+	float: right;
+}
+
+#header_cart {
+	width: 34px;
+	height: 100%;
+	float: right;
+}
+
+#header_bookmark {
+	width: 70px;
+	height: 100%;
+	float: right;
+}
+
+#header_home>img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px 0px 50px 0px;
 }
 
 #container {
-	width:100%;
-	float:left;
-	height:1000px;
+	width: 100%;
+	float: left;
+	height: 1000px;
 }
 
-#footer{
-	width:100%;
+#footer {
+	width: 100%;
 	height: 8em;
-	background-color: skyblue;
 	float: left;
 }
+
+/* footer inner */
+#footer_sns {
+	width: 100%;
+	height: 200px;
+}
+
+#footer_inner {
+	width: 100%;
+	height: 300px;
+}
+
+#footer_CustomerCnter {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#footer_BankAccount {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#footer_Community {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#footer_MemberShip {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#footer_Guide {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#footer_company_info {
+	width: 100%;
+	height: 200px;
+}
+/* footer inner */

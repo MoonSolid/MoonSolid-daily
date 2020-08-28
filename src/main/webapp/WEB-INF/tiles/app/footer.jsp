@@ -2,9 +2,22 @@
 
 <!-- footer -->
 <footer id="footer">
-	<div>
-	<p>footer</p>
-	<p>footer</p>
-	<p>footer</p>
-	</div>
+<hr>
+	<div id="footer_sns">
+				<h2 style="text-align: center; padding: 50px 0px 0px;">SNS</h2>
+				<hr>
+			</div>
+
+			<div id="footer_inner">
+			<hr>
+				<div id="footer_CustomerCnter">CustomerCnter</div>
+				<div id="footer_BankAccount">BankAccount</div>
+				<div id="footer_Community">Community</div>
+				<div id="footer_MemberShip">MemberShip</div>
+				<div id="footer_Guide">Guide</div>
+			</div>
+
+			<div id="footer_company_info">
+			<hr>conpanyInfo
+			</div>
 </footer>

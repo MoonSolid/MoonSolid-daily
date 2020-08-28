@@ -1,77 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-  pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+	pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!-- HEADER -->
-		<header id="header">
-			<div id="header1">
-				<nav>
-					<a class="navbar-brand" href="/MoonSolid-daily"><img
-						src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
-						alt="..." width="50%" height="42"> </a>
-				</nav>
-			</div>
-			<div id="header2">
-				<ul id="main-menu">
-					<li><a href="#">메인메뉴 1</a>
-						<ul id="sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 2</a>
-						<ul id="sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 3</a>
-						<ul id="sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 4</a>
-						<ul id="sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-				</ul>
-			</div>
+<header id="header">
+
+	<div id="header_menu">
+
+<div id="header_inner">
+
+		<div id="header_bookmark">
+			<p style="font-size: 11px">BOOKMARK</p>
+		</div>
+		<div id="header_cart">
+			<p style="font-size: 11px">CART</p>
+		</div>
+		<div id="header_mypage">
+			<p style="font-size: 11px">MY PAGE</p>
+		</div>
+		<div id="header_auth">
+		<c:if test="${empty loginUser}">
+			<p id="header_login"><a href="/MoonSolid-daily/app/member/generalJoin" style="font-size:11px;">JOIN US</a></p>
+			<p id="header_joinus"><a href="/MoonSolid-daily/app/auth/loginForm" style="font-size:11px;">LOGIN</a></p>
+			</c:if>
+			<c:if test="${not empty loginUser}">
+			<p id="header_logout"><a href="/MoonSolid-daily/app/auth/logout" style="font-size:11px;">LOGOUT</a></p>			
+			</c:if>
+		</div>
+			
+						
+					
+		
+</div>
 
 
-			<div id="header3">
+	</div>
 
-				<ul id="auth">
+	<div id="header-logo">
+		<nav>
+			<a id="header_home" href="/MoonSolid-daily"><img
+				src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
+				alt="..."> </a>
+		</nav>
+	</div>
 
-					<c:if test="${empty loginUser}">
-						<li><a href="/MoonSolid-daily/app/member/generalJoin">회원가입</a></li>
+	<div id="header-category"></div>
 
-						<li>
-							<a href="/MoonSolid-daily/app/auth/loginForm">로그인</a>
-						</li>
-					</c:if>
+	<hr>
 
-
-					<c:if test="${not empty loginUser}">
-						<li><a href="/MoonSolid-daily/app/auth/logout"
-							class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore font-weight-medium pt-3 pb-3">
-								<i class="fi fi-power float-start"></i> Log Out
-						</a></li>
-						<li>${loginUser.name}님환영합니다.</li>
-					</c:if>
-
-				</ul>
-
-			</div>
-
-
-		</header>
+</header>
 <!-- /HEADER -->

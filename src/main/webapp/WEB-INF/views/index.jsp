@@ -21,99 +21,88 @@
 <body>
 	<div id="index-wrapper">
 
+<!----------------------------------------------- 헤더 --------------------------------------------->
 		<div id="index-header">
-			<div id="index-header1">
-				<nav>
-					<a class="navbar-brand" href="/MoonSolid-daily"><img
-						src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
-						alt="..." width="50%" height="100%"> </a>
-				</nav>
-			</div>
-			<div id="index-header2">
-				<ul id="index-main-menu">
-					<li><a href="#">메인메뉴 1</a>
-						<ul id="index-sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 2</a>
-						<ul id="index-sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 3</a>
-						<ul id="index-sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-					<li><a href="#">메인메뉴 4</a>
-						<ul id="index-sub-menu">
-							<li><a href="#">서브메뉴 1</a></li>
-							<li><a href="#">서브메뉴 2</a></li>
-							<li><a href="#">서브메뉴 3</a></li>
-							<li><a href="#">서브메뉴 4</a></li>
-						</ul></li>
-				</ul>
-			</div>
+		
+	
+			<div id="index-header_menu">
+
+<div id="index-header_inner">
+
+		<div id="index-header_bookmark">
+			<p style="font-size: 11px">BOOKMARK</p>
+		</div>
+		<div id="index-header_cart">
+			<p style="font-size: 11px">CART</p>
+		</div>
+		<div id="index-header_mypage">
+			<p style="font-size: 11px">MY PAGE</p>
+		</div>
+		<div id="index-header_auth">
+		<c:if test="${empty loginUser}">
+			<p id="index-header_login"><a href="/MoonSolid-daily/app/member/generalJoin" style="font-size:11px;">JOIN US</a></p>
+			<p id="index-header_joinus"><a href="/MoonSolid-daily/app/auth/loginForm" style="font-size:11px;">LOGIN</a></p>
+			</c:if>
+			<c:if test="${not empty loginUser}">
+			<p id="index-header_logout"><a href="/MoonSolid-daily/app/auth/logout" style="font-size:11px;">LOGOUT</a></p>			
+			</c:if>
+		</div>
+			
+						
+					
+		
+</div>
 
 
-			<div id="index-header3">
+	</div>
 
-				<ul id="index-auth">
+	<div id="index-header-logo">
+		<nav>
+			<a id="index-header_home" href="/MoonSolid-daily"><img
+				src="${pageContext.request.getContextPath()}/resources/assets/images/logo/logo.png"
+				alt="..."> </a>
+		</nav>
+	</div>
 
-					<c:if test="${empty loginUser}">
-						<li><a href="/MoonSolid-daily/app/member/generalJoin">회원가입</a></li>
+	<div id="index-header-category"></div>
 
-						<li>
-							<a href="/MoonSolid-daily/app/auth/loginForm">로그인</a>
-						</li>
-					</c:if>
+	<hr>
 
-
-					<c:if test="${not empty loginUser}">
-						<li><a href="/MoonSolid-daily/app/auth/logout"
-							class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore font-weight-medium pt-3 pb-3">
-								<i class="fi fi-power float-start"></i> Log Out
-						</a></li>
-						<li>${loginUser.name}님환영합니다.</li>
-					</c:if>
-
-				</ul>
-
-			</div>
-
-
+		
+		</div>			
+        
+        
+<!---------------------------------------------- /헤더 --------------------------------------------->       
 		</div>
 
 
 		<div id="index-container">
+		<hr>
 			<div>
 				<a href="/MoonSolid-daily/app/board/list"> 게시글</a>
 			</div>
 		</div>
 		<div id="index-footer">
-		
-		<div id="index-footer.sns" style="width:100%; height:200px; background-color:red;">
-		 <h2 style="text-align:center; padding:50px 0px 0px;">SNS</h2>
-		  <hr>
-		</div>
-		
-		<div id="index-footer.inner" style="width:100%; height:300px; background-color:blue;">
-		<div id="index-CustomerCnter" style="width:20%; height:300px; background-color:#46B8FF; float:left;">CustomerCnter</div>
-		<div id="index-BankAccount" style="width:20%; height:300px; background-color:#3CAEFF; float:left;">BankAccount</div>
-		<div id="index-Community" style="width:20%; height:300px; background-color:#32A4FF; float:left;">Community</div>
-		<div id="index-MemberShip" style="width:20%; height:300px; background-color:#289AFF; float:left;">MemberShip</div>
-		<div id="index-Guide" style="width:20%; height:300px; background-color:#1E90FF; float:left;">Guide</div>
-		</div>
-		
-		<div id="index-company.info" style="width:100%; height:200px; background-color:green;">conpanyInfo</div>
-		 
+     <hr>
+			<div id="index-footer_sns">
+				<h2 style="text-align: center; padding: 50px 0px 0px;">SNS</h2>
+				<hr>
+			</div>
+
+			<div id="index-footer_inner">
+			    <hr>
+				<div id="index-footer_CustomerCnter">CustomerCnter</div>
+				<div id="index-footer_BankAccount">BankAccount</div>
+				<div id="index-footer_Community">Community</div>
+				<div id="index-footer_MemberShip">MemberShip</div>
+				<div id="index-footer_Guide">Guide</div>
+			</div>
+            
+			<div id="index-footer_company_info">
+			<hr>
+			conpanyInfo
+			</div>
+
 		</div>
 
 	</div>
