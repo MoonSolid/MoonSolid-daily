@@ -47,15 +47,11 @@
 			<p id="index-header_logout"><a href="/MoonSolid-daily/app/auth/logout" style="font-size:11px;">LOGOUT</a></p>			
 			</c:if>
 		</div>
-			
-						
-					
 		
 </div>
 
-
 	</div>
-
+	
 	<div id="index-header-logo">
 		<nav>
 			<a id="index-header_home" href="/MoonSolid-daily"><img
@@ -68,12 +64,11 @@
 
 	<hr>
 
-		
 		</div>			
         
         
 <!---------------------------------------------- /헤더 --------------------------------------------->       
-		</div>
+
 
 
 		<div id="index-container">
@@ -108,5 +103,6 @@
 	</div>
 	<script
 		src="${pageContext.request.getContextPath()}/resources/assets/js/core.js"></script>
+		</div>
 </body>
 </html>
